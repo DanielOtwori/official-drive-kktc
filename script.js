@@ -27,15 +27,8 @@
      CONTACT FORM BACKEND
      ------------------------------------------------------------------
      This is a static site with no server, so the contact form has
-     nothing to submit to out of the box. Two options:
-
-     1. RECOMMENDED — sign up for a free form backend (Formspree,
-        Getform, Basin, etc.), then paste the endpoint URL below.
-        Formspree example: create a form at https://formspree.io,
-        then set CONTACT_ENDPOINT to "https://formspree.io/f/xxxxabcd".
-     2. Leave it blank (default) — the form falls back to opening the
-        visitor's own email client via a pre-filled mailto: link, so
-        messages still reach you instead of silently disappearing.
+     nothing to submit to out of the box. 
+     I'll work on this later, but for now I've left the endpoint blank so you can fill in your own Formspree or Netlify Forms URL. If you don't have one, the form will fall back to a mailto: link that opens the user's email client.
      ------------------------------------------------------------------ */
   const CONTACT_ENDPOINT = ''; // e.g. 'https://formspree.io/f/xxxxabcd'
   const CONTACT_FALLBACK_EMAIL = 'hello@drivekktc.com'; // used only by the mailto: fallback above
@@ -242,9 +235,7 @@
      ------------------------------------------------------------------
      The menu items are now real links to the sibling-language pages
      (built at author time), except for the current language, which
-     renders as a disabled, aria-current item. All this code does is
-     open/close the menu and keep the current-hash so switching
-     language mid-route lands on the same section on the new page.
+     renders as a disabled, aria-current item. 
      ------------------------------------------------------------------ */
   const langSelect = $('#lang-select');
   const langToggle = $('#lang-toggle');
